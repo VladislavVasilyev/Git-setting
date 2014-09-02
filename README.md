@@ -1,7 +1,7 @@
 Git-setting 
 ===========
 
-\Git\share\vim\vimrc
+\Git\share\vim\vimrc 
 
 \Git\etc\bashrc
 \Git\etc\inputrc
