@@ -1,0 +1,92 @@
+[user]
+	name = Vladislav Vasilyev
+	email = github@wasilyev.com
+	git = git@wasilyev.com
+
+[core]
+	symlinks = false
+	autocrlf = true
+	quotepath = false
+	#pager  = cat | less
+	#pager = gitpad
+	pager = iconv.exe -f UTF-8 -t UTF-8 | less
+	editor = notepad
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
+[pack]
+	packSizeLimit = 2g
+[help]
+	format = html
+[http]
+	sslCAinfo = /bin/curl-ca-bundle.crt
+[sendemail]
+	smtpserver = /bin/msmtp.exe
+
+#[remote "project"]
+#	url = d:\\project.git
+#	fetch = +refs/heads/*:refs/remotes/project/*
+
+#--------------------------------------------------------------------------------------------#
+
+[diff]
+   	tool = winmerge
+	guitool = winmerge
+[difftool "winmerge"]
+	cmd = \"D:/Program Files (x86)/WinMerge/WinMergeU.exe\" -e \"$LOCAL\" \"$REMOTE\"
+	path=D:/Program Files (x86)/WinMerge/WinMergeU.exe
+#    	cmd = winmergeu.exe -e -ub -x -wl -u -maximise -dl "base" -dr "mine" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    	prompt = false
+
+#[diff "astextplain"]
+#	textconv = astextplain
+
+#[diff “localizablestrings”]
+#	textconv = “iconv -f utf-8 -t utf-8”
+
+#--------------------------------------------------------------------------------------------#
+
+[merge]
+    	tool = winmerge
+	guitool = winmerge
+[mergetool "winmerge"]
+         cmd = \"D:/Program Files (x86)/WinMerge/WinMergeU.exe\" -e \"$MERGED\" \"$REMOTE\"
+         path= D:/Program Files (x86)/WinMerge/WinMergeU.exe
+[mergetool]
+    	 keepBackup = false
+    	 trustExitCode = false
+
+[push]
+	default = simple
+
+[rebase]
+	autosquash = true
+
+#--------------------------------------------------------------------------------------------#
+
+[gui]
+	encoding = UTF-8
+
+[guitool "diff"]
+	cmd = git difftool
+
+#--------------------------------------------------------------------------------------------#
+
+[i18n]
+        commitencoding = UTF-8 #cp1251
+        logoutputencoding = UTF-8
+[alias]
+	dt = difftool --tool=vimdiff2
+  	co = checkout
+  	ci = commit
+  	st = status
+  	br = branch
+  	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  	histl = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph
+  	type = cat-file -t
+  	dump = cat-file -p
+
+
