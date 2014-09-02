@@ -10,7 +10,7 @@
 	#pager  = cat | less
 	#pager = gitpad
 	pager = iconv.exe -f UTF-8 -t UTF-8 | less
-	editor = notepad
+	editor = vim # notepad
 [color]
 	diff = auto
 	status = auto
@@ -44,7 +44,7 @@
 #[diff "astextplain"]
 #	textconv = astextplain
 
-#[diff “localizablestrings”]
+#[diff "localizablestrings"]
 #	textconv = “iconv -f utf-8 -t utf-8”
 
 #--------------------------------------------------------------------------------------------#
